@@ -1,0 +1,184 @@
+/* Base Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Color Variables */
+:root {
+  --bg-black: #0a0a0a;
+  --card-dark: #111111;
+  --accent-red: #ff4b4b;
+  --accent-blue: #3b82f6;
+  --accent-purple: #a855f7;
+  --text-white: #f1f5f9;
+  --text-muted: #94a3b8;
+}
+
+/* Body and Root */
+body,
+html,
+#root {
+  height: 100%;
+  background-color: var(--bg-black);
+  color: var(--text-white);
+  overflow: hidden;
+  scrollbar-width: none; /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Edge, Safari */
+}
+
+/* Layout Container */
+.container {
+  display: flex;
+  height: 100vh;
+  overflow: auto;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 260px;
+  background: var(--bg-black);
+  box-shadow: 2px 0 12px rgba(255, 75, 75, 0.1);
+  border-right: 1px solid var(--accent-red);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0.5rem;
+  gap: 2rem;
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--accent-red);
+  text-align: center;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.nav-item a {
+  text-decoration: none;
+  font-size: 0.875rem;
+  color: var(--text-white);
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  display: block;
+  background: #0d0d0d;
+  border: 1px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-item a:hover {
+  background: var(--accent-red);
+  color: #fff;
+  border-color: var(--accent-red);
+  transform: scale(1.05);
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  background-color: #000;
+  color: var(--text-white);
+  transition: all 0.3s ease;
+  border-left: 1px solid #000;
+  overflow-y: scroll;
+  height: 100vh;
+  scrollbar-width: none; /* Firefox */
+}
+
+.main-content::-webkit-scrollbar {
+  display: none;
+}
+
+/* Title */
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #8b5cf6, #ec4899, #f43f5e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glowText 3s ease-in-out infinite alternate;
+}
+
+@keyframes glowText {
+  from {
+    text-shadow: 0 0 10px #8b5cf6;
+  }
+  to {
+    text-shadow: 0 0 20px #f43f5e;
+  }
+}
+
+/* Card/Widget Styles */
+.card,
+.dashboard-box,
+.MuiPaper-root,
+.widget,
+.stats-box {
+  background-color: var(--card-dark) !important;
+  color: var(--text-white) !important;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* Fade-in Animation */
+.sidebar,
+.main-content {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Optional: Subtle Background Glow */
+body::before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 0, 0, 0.03),
+    transparent 60%
+  );
+  z-index: 0;
+  pointer-events: none;
+  animation: pulseGlow 6s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}

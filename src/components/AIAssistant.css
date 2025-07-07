@@ -1,0 +1,73 @@
+/* AIAssistant.css */
+.ai-assistant-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.ai-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(to right, #8f0404, #ec4899);
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.ai-logo {
+  width: 20px;
+  height: 20px;
+}
+
+.ai-panel {
+  position: absolute;
+  bottom: 60px;
+  right: 0;
+  width: 280px;
+  background: #1e1e1e;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+  overflow: auto;
+  padding: 1rem;
+}
+
+.ai-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.ai-body textarea {
+  width: 100%;
+  margin-top: 0.5rem;
+  border-radius: 6px;
+  padding: 0.5rem;
+  resize: none;
+  border: none;
+}
+
+.send-btn {
+  margin-top: 0.5rem;
+  width: 100%;
+  padding: 0.4rem;
+  background-color: #8f0404;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
