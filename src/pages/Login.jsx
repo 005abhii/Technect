@@ -30,7 +30,7 @@ const Login = () => {
     >
       <div
         style={{
-          background: "#1e1e1e",
+          background: "#000",
           padding: "40px 30px",
           borderRadius: "16px",
           boxShadow: "0 8px 30px rgba(0, 0, 0, 0.5)",
