@@ -11,7 +11,7 @@ function Sidebar() {
         }}
       >
         <img
-          src="/Technect.png"
+          src="/Tech.jpg"
           alt="Logo"
           style={{
             height: 50,

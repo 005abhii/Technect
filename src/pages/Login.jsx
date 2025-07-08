@@ -40,7 +40,7 @@ const Login = () => {
       >
         <div style={{ textAlign: "center", marginBottom: 20 }}>
           <img
-            src="/Technect.png"
+            src="/Tech.jpg"
             alt="Logo"
             style={{ height: 50, marginBottom: 10 }}
           />
